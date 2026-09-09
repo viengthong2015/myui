@@ -1,0 +1,993 @@
+/* :root {
+    --primary-color: #2c3e50;
+    --secondary-color: #027235;
+    --text-color: #333;
+    --bg-color: #f4f7f6;
+} */
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #027235;
+    --text-color: #333;
+    --bg-color: #f4f7f6;
+}
+
+/* :root {
+            --bg-color: #02092c;
+            --neon-cyan: #00f3ff;
+            --neon-green: #39ff14;
+            --coin-top: #26dbaa;
+            --coin-side: #0f866d;
+            --glow-shadow: 0 0 15px rgba(0, 243, 255, 0.6);
+        } */
+
+body {
+    font-family: 'Noto Sans Lao', 'Phetsarath OT', sans-serif;
+    margin: 0;
+    background-color: var(--bg-color);
+    overflow: hidden;
+    color: var(--text-color);
+}
+
+table {
+    font-family: 'Noto Sans Lao', 'Phetsarath OT', sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.slide {
+    opacity: 0;
+    display: none;
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    right: 15px;
+    bottom: 55px;
+    width: auto;
+    height: auto;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #f8f6f6 98%, #027235 2%);
+    box-shadow: 0 10px 25px rgba(2, 111, 26, 0.1);
+    overflow-y: auto;
+}
+
+.slide-container {
+    /* width: 100vw;
+    height: calc(100vh - 120px);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-top: 110px; */
+
+
+    width: 100vw;
+    /* Dynamically calculate the remaining height */
+    height: calc(100vh - var(--header-offset, 120px));
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+    /* Dynamically calculate the exact margin needed */
+    margin-top: var(--header-offset, 120px);
+}
+
+.slide.active {
+    display: block;
+}
+
+/* ANIMATIONS */
+.slide-next {
+    animation: slideNext 0.5s ease forwards;
+}
+
+.slide-back {
+    animation: slideBack 0.5s ease forwards;
+}
+
+@keyframes slideNext {
+    from {
+        opacity: 0;
+        transform: translateX(360px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideBack {
+    from {
+        opacity: 0;
+        transform: translateX(-360px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+
+
+h1,
+h2 {
+    color: #027235;
+    padding-bottom: 10px;
+    width: 100%;
+}
+
+p,
+li {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+/* CONTROLS & UTILITIES */
+.controls {
+    position: absolute;
+    bottom: 15px;
+    width: 99%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background: linear-gradient(135deg, #afd7e3 93%, #027235 7%);
+    border-bottom-right-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: 0.3s;
+    width: 120px;
+    height: 35px;
+    background: #012073;
+    font-family: 'Noto Sans Lao', sans-serif;
+}
+
+button:hover {
+    background: #027235;
+}
+
+.progress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 5px;
+    background: #027235;
+    transition: width 1s;
+    z-index: 2000;
+}
+
+.slide-number {
+    position: absolute;
+    bottom: 15px;
+    right: 20px;
+    font-size: 0.9rem;
+    color: white;
+}
+
+.label-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 15px;
+}
+
+.label-text {
+    letter-spacing: 1px;
+    line-height: 1.5;
+}
+
+.label {
+    color: white;
+    font-weight: bold;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    background: #027235;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), #027235, rgba(255, 255, 255, 0));
+}
+
+.dashboard {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 20px;
+    background: white;
+    border-left: 5px solid #027235;
+    border-radius: 14px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #1f2937;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+.dotText {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.dotText::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background: #04a54f;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #04a54f;
+    flex-shrink: 0;
+}
+
+/* Your existing Header CSS */
+.header-container {
+    position: fixed;
+    top: 10px;
+    left: 26px;
+    width: 98%;
+    display: flex;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.animated-label {
+    width: 100%;
+    margin: 0;
+    /* padding: 12px 24px; */
+    padding: 6px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    background: linear-gradient(270deg, #054e27, #04a54f, #04a54f, #6defaa);
+    background-size: 400% 400%;
+    border-radius: 12px 12px 0 0;
+    animation: gradientMove 6s ease infinite;
+}
+
+
+
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* JUPYTER CELL */
+.jupyter-cell {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    border: grey 1px solid;
+    border-radius: 8px;
+    margin-bottom: 17px;
+    box-shadow: inset 0 0 20px #aaaaaa;
+    background-color: #f9f9f9;
+    padding: 10px;
+}
+
+.prompt {
+    min-width: 90px;
+    padding: 0.4em;
+    margin: 0;
+    font-family: monospace;
+    font-size: 14px;
+    text-align: right;
+    line-height: 1.21429em;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+}
+
+.input-prompt {
+    color: #303F9F;
+}
+
+.code-area {
+    flex: 1;
+    background-color: #f7f7f7;
+    border: 1px solid #cfcfcf;
+    border-radius: 2px;
+    padding: 0.1em;
+    font-family: "Consolas", "Monaco", monospace;
+    font-size: 20px;
+    line-height: 1.21429em;
+    white-space: pre;
+    overflow-x: auto;
+}
+
+.output-container {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    margin-top: -1px;
+}
+
+.output-prompt {
+    color: #D84315;
+}
+
+.output-area {
+    flex: 1;
+    padding: 0.1em;
+    font-family: "Consolas", "Monaco", monospace;
+    font-size: 20px;
+    line-height: 1.21429em;
+    white-space: pre-wrap;
+    color: #000;
+    border: 1px solid #ad6f5c;
+}
+
+/* CARD PANELS */
+.panel-container {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    width: 100%;
+    margin: 0;
+}
+
+.panel-card {
+    background-color: #f4f7f7;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    max-width: 280px;
+    min-height: 280px;
+    padding: 5px;
+    box-sizing: border-box;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.panel-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+
+.panel-card1 {
+    background-color: #f4f7f7;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    /* max-width: 280px;
+    min-height: 280px; */
+    width: 180px;
+    height: 180px;
+    padding: 5px;
+    box-sizing: border-box;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.panel-card1:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+.card-teal {
+    border-top: 10px solid #237b76;
+}
+
+.card-blue1 {
+    border-top: 10px solid #70b2bc;
+}
+
+.card-orange {
+    border-top: 10px solid #f1a429;
+}
+
+.card-blue {
+    border-top: 10px solid #1b1ef2;
+}
+
+.card-pink {
+    border-top: 10px solid #9e0fb1;
+}
+
+.card-day {
+    font-size: 14px;
+    color: #8a9a9d;
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+.card-number {
+    font-size: 72px;
+    font-weight: bold;
+    color: #1a5163;
+    line-height: 1;
+    margin: 15px 0;
+}
+
+.card-number1 {
+    font-size: 50px;
+    font-weight: bold;
+    color: #1a5163;
+    line-height: 1;
+    margin: 15px 0;
+}
+.card-text {
+    font-size: 16px;
+    color: #1a5163;
+    font-weight: 700;
+    line-height: 1.5;
+    margin: 0;
+    overflow-wrap: break-word;
+    word-break: break-word;
+}
+
+
+
+
+
+/* PROGRESS CHARTS */
+.progress1 {
+    width: 300px;
+    height: 30px;
+    background-color: #e0e0e0;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: inset 2px 4px 6px rgba(0, 0, 0, 0.25), inset -1px -1px 3px rgba(255, 255, 255, 0.5);
+    position: relative;
+}
+
+.progress-bar1 {
+    height: 100%;
+    background-color: #0a880e;
+    color: white;
+    text-align: center;
+    line-height: 30px;
+    width: 65%;
+    border-radius: 15px 0 0 15px;
+    box-shadow: inset 2px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.ring-chart {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: conic-gradient(from 90deg, var(--color) var(--percentage), #e0e0e0 0);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ring-chart::after {
+    content: "";
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    background: #ffffff;
+}
+
+.ring-label {
+    position: relative;
+    z-index: 1;
+    font-family: sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+
+/* Base Card Container - Beging*/
+.metric-card-green {
+    /* Scoped variables strictly for this card */
+    --card-start-color: #064e3b;
+    --card-end-color: #059669;
+    --card-text-primary: #ffffff;
+    --card-text-secondary: #a7f3d0;
+
+    background: linear-gradient(135deg, var(--card-start-color) 0%, var(--card-end-color) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    padding: 24px;
+    width: 100%;
+    max-width: 320px;
+    box-shadow: 0 10px 25px -5px rgba(6, 78, 59, 0.15), 0 8px 10px -6px rgba(6, 78, 59, 0.15);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    box-sizing: border-box;
+    transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Hover Interaction */
+.metric-card-green:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 25px -5px rgba(6, 78, 59, 0.25), 0 10px 10px -5px rgba(6, 78, 59, 0.25);
+}
+
+/* Header Section */
+.card-header-green {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-title-green {
+    font-size: 0.8125rem;
+    font-weight: 700;
+    color: var(--card-text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin: 0;
+}
+
+/* Glassmorphic Trend Pill */
+.trend-pill-green {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px 10px;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+}
+
+/* Body / Main Value Section */
+.card-body-green {
+    display: flex;
+    align-items: baseline;
+}
+
+.metric-value-green {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--card-text-primary);
+    letter-spacing: -0.03em;
+    line-height: 1;
+    font-variant-numeric: tabular-nums;
+}
+
+/* Footer Section */
+.card-footer-green {
+    font-size: 0.8125rem;
+    color: var(--card-text-secondary);
+    opacity: 0.9;
+}
+
+/* Base Card Container - End*/
+
+.columnDiv {
+    display: flex;
+    flex-direction: row;
+    /* Items stay side-by-side */
+    justify-content: center;
+    /* Centers horizontally */
+    /* align-items: center; */
+    /* Centers vertically */
+    gap: 20px;
+
+}
+
+.rowDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 👈 makes items stack vertically */
+    gap: 20px;
+}
+
+
+
+.modern-details {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    /* Removed general padding so the summary background spans edge-to-edge */
+    border-left: 5px solid #027235;
+    border-bottom: 2px solid #02d461;
+    padding: 15px;
+    font-family: 'Noto Sans Lao', 'Phetsarath OT', sans-serif;
+}
+
+.modern-details:hover {
+    box-shadow: 0 4
+}
+
+.modern-details:hover {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* Summary header */
+.modern-details summary {
+    list-style: none;
+    /* Hides default arrow in most browsers */
+    padding: 1rem;
+    cursor: pointer;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+    background-color: #f4f7f7;
+    border-radius: 10px 10px 0 0;
+
+}
+
+/* Hides the default arrow in Safari */
+.modern-details summary::-webkit-details-marker {
+    display: none;
+}
+
+/* Custom Indicator (The Arrow) */
+.modern-details summary::after {
+    content: '🞂';
+    /* Or use a SVG/icon */
+    transition: transform 0.3s ease;
+    color: #64748b;
+}
+
+/* Rotate arrow when open */
+.modern-details[open] summary::after {
+    transform: rotate(90deg);
+
+}
+
+/* Inner content padding */
+.modern-details .content {
+    padding: 0 1rem 1rem 1rem;
+    line-height: 1.6;
+    color: #475569;
+    border-top: 1px solid #f1f5f9;
+    animation: slideDown 0.3s ease-out;
+}
+
+
+
+
+/* Container for the rows with a modern emerald gradient */
+.profile-info-list {
+    list-style: none;
+    padding: 24px;
+    margin: 20px auto;
+    /* max-width: 950px; */
+    /* background: linear-gradient(135deg, #11998e, #38ef7d); */
+    background: linear-gradient(135deg, #023616, #096c2f);
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(17, 153, 142, 0.25);
+    font-family: 'Phetsarath OT', 'Noto Sans Lao', sans-serif;
+}
+
+/* Individual Row Layout - Shifted Left */
+.profile-info-list li {
+    display: flex;
+    justify-content: flex-start;
+    /* Shifts everything to the left */
+    align-items: center;
+    padding: 12px 16px;
+    color: #ffffff;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    border-radius: 8px;
+    margin: 10px;
+}
+
+/* Remove the bottom border from the very last row */
+.profile-info-list li:last-child {
+    border-bottom: none;
+}
+
+/* Subtle hover effect for the rows */
+.profile-info-list li:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateX(4px);
+    /* Tiny nudge to the right on hover */
+}
+
+/* Label styling (Fixed width makes the values line up perfectly) */
+.profile-info-list .label2 {
+    font-weight: 600;
+    font-size: 0.95rem;
+    opacity: 0.9;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 160px;
+    /* Forces all labels to occupy the exact same space */
+    flex-shrink: 0;
+    /* Prevents the label from squishing */
+}
+
+/* Value styling (Positioned immediately after the label column) */
+.profile-info-list .value2 {
+    font-weight: 500;
+    font-size: 1.05rem;
+    /* background: rgba(255, 255, 255, 0.15); */
+    padding: 4px 12px;
+    /* border-radius: 20px; */
+    /* border: 1px solid rgba(255, 255, 255, 0.2); */
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 520px) {
+    .profile-info-list li {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+    }
+
+    .profile-info-list .label {
+        width: auto;
+    }
+}
+
+
+
+
+
+/* Money */
+:root {
+    --neon-cyan: #00f3ff;
+    --neon-green: #39ff14;
+    --coin-top: #26dbaa;
+    --coin-side: #0f866d;
+    --glow-shadow: 0 0 15px rgba(0, 243, 255, 0.6);
+
+    /* --neon-cyan: #0dfb05;
+    --neon-green: #39ff14;
+    --coin-top: #26dbaa;
+    --coin-side: #0f866d;
+    --glow-shadow: 0 0 15px rgba(0, 243, 255, 0.6);*/
+}
+
+/* 1. Define the base scale on your control class */
+.controlSize {
+    --zoom: 1;
+    /* Default size (1 = 100%) */
+    transform: scale(var(--zoom));
+    transform-origin: center center;
+    /* Ensures it scales cleanly from the middle */
+    display: inline-block;
+    /* Prevents layout collapse during scaling */
+}
+
+/* 2. Create easy modifiers to scale up or down */
+.controlSize.small {
+    --zoom: 0.3;
+    /* 50% of the original size */
+}
+
+.controlSize.medium {
+    --zoom: 0.75;
+    /* 75% of the original size */
+}
+
+.controlSize.large {
+    --zoom: 1.5;
+    /* 150% of the original size */
+}
+
+/* 3D Scene Setup */
+.scene {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    transform: rotateX(60deg) rotateZ(-45deg);
+    transform-style: preserve-3d;
+}
+
+/* Base Coin Structure */
+.coin-stack {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    transform-style: preserve-3d;
+}
+
+.coin {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    transform-style: preserve-3d;
+    transition: transform 0.3s ease;
+}
+
+/* Generate vertical translation offset based on stack positioning */
+.coin:nth-child(1) {
+    transform: translateZ(0px);
+}
+
+.coin:nth-child(2) {
+    transform: translateZ(12px);
+}
+
+.coin:nth-child(3) {
+    transform: translateZ(24px);
+}
+
+.coin:nth-child(4) {
+    transform: translateZ(36px);
+}
+
+.coin:nth-child(5) {
+    transform: translateZ(48px);
+}
+
+.coin:nth-child(6) {
+    transform: translateZ(60px);
+}
+
+.coin .top {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* background: radial-gradient(circle, #a3fff4 0%, var(--coin-top) 80%); */
+    background: radial-gradient(circle, #066d69 0%, var(--coin-top) 80%);
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 0 12px rgba(38, 219, 170, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-weight: bold;
+    font-size: 32px;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+    transform: translateZ(10px);
+}
+
+.coin .side {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: var(--coin-side);
+    border-radius: 50%;
+    transform: translateZ(0px);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    /* Creates the 3D extrusion edge */
+    box-shadow:
+        0 1px 0 var(--coin-side),
+        0 2px 0 var(--coin-side),
+        0 3px 0 var(--coin-side),
+        0 4px 0 var(--coin-side),
+        0 5px 0 var(--coin-side),
+        0 6px 0 var(--coin-side),
+        0 7px 0 var(--coin-side),
+        0 8px 0 var(--coin-side),
+        0 9px 0 var(--coin-side);
+}
+
+/* Absolute coordinates matching the layout of the source image */
+.stack-back {
+    top: 50px;
+    left: 150px;
+}
+
+.stack-right {
+    top: 140px;
+    left: 210px;
+}
+
+.stack-front-center {
+    top: 170px;
+    left: 100px;
+}
+
+.stack-left {
+    top: 90px;
+    left: 60px;
+}
+
+/* Flat Floating Dollar Coins */
+.floating-coin {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    transform-style: preserve-3d;
+    animation: float 3s ease-in-out infinite alternate;
+}
+
+.coin-left {
+    top: 260px;
+    left: 40px;
+    animation-delay: 0.5s;
+}
+
+.coin-front {
+    top: 290px;
+    left: 160px;
+}
+
+.floating-coin .coin-face {
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, #ffffff 10%, var(--neon-cyan) 80%);
+    border-radius: 50%;
+    border: 2px solid #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #0a255c;
+    font-weight: 900;
+    font-size: 20px;
+    box-shadow: var(--glow-shadow), inset 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+/* Hover & Float Animations */
+@keyframes float {
+    0% {
+        transform: translateZ(15px);
+    }
+
+    100% {
+        transform: translateZ(35px);
+    }
+}
+
+/* Light Micro-Interaction */
+.coin-stack:hover .coin {
+    /* filter: brightness(1.2); */
+    filter: opacity(0.5);
+    cursor: pointer;
+}
+
+
+/* Timer */
+.timer-ring {
+
+    position: relative;
+    width: 120px;
+    height: 30px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    margin-right: 250px;
+}
+
+/* --- Time Text Styling --- */
+.timer-text {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #047145;
+    letter-spacing: 1px;
+}
