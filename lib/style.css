@@ -169,12 +169,25 @@ button:hover {
     z-index: 2000;
 }
 
-.slide-number {
+/* .slide-number {
     position: absolute;
     bottom: 15px;
     right: 20px;
     font-size: 0.9rem;
     color: white;
+    font-weight: bold;
+} */
+ .slide-number {
+    position: absolute;
+    bottom: 18px;
+    right: 20px;
+    font-size: 0.9rem;
+    color: white;
+    font-weight: bold;
+
+    display: flex;
+    justify-content: center; /* horizontal */
+    align-items: center;     /* vertical */
 }
 
 .label-row {
