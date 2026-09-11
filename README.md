@@ -1,12 +1,12 @@
 ໃນໂຄງການນີ້ແມ່ນ ການນຳສະເໜີຜົນການຄົ້ນຄວ້າວິທະຍາສາດ ຕໍ່ກອງປະຊຸມຂອງບຸນວິທະຍາສາດ ທີ່ຈັດໂດຍ ມະຫາວິທະຍາໄລແຫ່ງຊາດ (ມ.ຊ) ໃນວັນທີ່ 5-6 ພະຈິກ 2026 ທີ່ ມ.ຊ
 =======ບົດຄັດຫຍໍ້================
 
-ບົດຄັດຫຍໍ້
+**ບົດຄັດຫຍໍ້**
 ການພັດທະນາຊອບແວທີ່ຮອງຮັບຫຼາຍພາສາ ໃນປັດຈຸບັນມັກປະສົບກັບບັນຫາໃນການຈັດການພາສາ (Localization) ເຊັ່ນ: ການກຳນົດຄຳສັບຕາຍຕົວໃນ Source Code (Hard-coded strings), ຄວາມຊ້ຳຊ້ອນຂອງຂໍ້ຄຳສັບ, ການຂາດມາດຕະຖານໃນການໃຊ້ຄຳສັບ, ແລະ ຄວາມຈຳເປັນຕ້ອງ Build ແລະ Deploy ລະບົບໃໝ່ທຸກຄັ້ງທີ່ມີການແປ ຫຼື ປ່ຽນແປງຄຳສັບ. ເພື່ອແກ້ໄຂບັນຫາດັ່ງກ່າວ, ໂຄງການນີ້ຈຶ່ງໄດ້ນຳສະເໜີການພັດທະນາ "ລະບົບຄຸ້ມຄອງພາສາ ໃນໜ້າ UI ແບບ Runtime". ຈຸດປະສົງຫຼັກແມ່ນເພື່ອອອກແບບຖານຂໍ້ມູນແບບ Single Source of Truth ແລະ ພັດທະນາ Translation Engine ທີ່ສາມາດດຶງຄຳແປມາສະແດງຜົນເທິງໜ້າ UI ໄດ້ທັນທີໃນຂະນະທີ່ລະບົບເຮັດວຽກ ໂດຍບໍ່ຕ້ອງແກ້ໄຂ Source Code ໂດຍກົງ. ໂຄງສ້າງລະບົບປະກອບດ້ວຍ ຖານຂໍ້ມູນ, Connection Layer (ຜ່ານ API ຫຼື Java RMI), ແລະ Translation Engine ເຊິ່ງສາມາດຮອງຮັບການເຮັດວຽກໄດ້ທັງຮູບແບບ Web, Windows ແລະ Mobile Application.
 ນອກຈາກນີ້, ໂຄງການຍັງໄດ້ລວມເອົາການສ້າງໜ້າ Admin Interface ເພື່ອອຳນວຍຄວາມສະດວກໃຫ້ຜູ້ໃຊ້ທົ່ວໄປທີ່ບໍ່ແມ່ນສາຍຊຳນານດ້ານລະບົບ ສາມາດເຂົ້າໄປເພີ່ມ ແລະ ຈັດການຄຳແປໄດ້ດ້ວຍຕົນເອງ. ຜົນໄດ້ຮັບທີ່ຄາດຫວັງຈາກໂຄງການນີ້ແມ່ນການເພີ່ມຄວາມຢືດຢຸ່ນໃຫ້ແກ່ລະບົບ, ຫຼຸດຜ່ອນຕົ້ນທຶນ ແລະ ເວລາໃນການພັດທະນາ, ພ້ອມທັງຫຼຸດຜ່ອນຂັ້ນຕອນການ Re-build ແລະ Deploy ທີ່ຊ້ຳຊ້ອນໄດ້ຢ່າງມີປະສິດທິພາບ.
 ສຸດທ້າຍ, ໂຄງການຈະໄດ້ມີການສາທິດລະບົບທີ່ໄດ້ພັດທະນາຂຶ້ນ ເພື່ອສະແດງໃຫ້ເຫັນເຖິງການເຮັດວຽກຂອງຊອບແວ (software) ຕົວຈິງ ແລະ ພິສູດຄວາມເປັນໄປໄດ້ຂອງແນວຄວາມຄິດນີ້ໃຫ້ເຫັນຜົນຢ່າງເປັນຮູບປະທຳ.
 
-Abstract
+**Abstract**
 Current software development often faces significant localization challenges, including hard-coded strings in the source code, data redundancy, inconsistent technical terminology, and the tedious necessity to rebuild and redeploy systems whenever translation updates occur. 
 To address these issues, this project proposes the development of a "Dynamic Runtime UI Language Management System". The primary objective is to design a Single Source of Truth database model alongside a Runtime Translation Engine capable of dynamically retrieving and displaying translations on the user interface without direct source code modifications. 
 The system architecture consists of a database, a connection layer utilizing API or Java RMI, and a translation engine, which collectively support Web, Windows, and Mobile applications. Furthermore, the project includes the development of an Admin Interface, empowering non-technical users and system administrators to independently manage and update translations. The expected outcomes of this project include enhanced system agility, significant reductions in development time and costs, and the complete elimination of redundant rebuild and deployment cycles.
