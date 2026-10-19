@@ -159,6 +159,48 @@ button:hover {
     background: #027235;
 }
 
+button:disabled {
+    cursor: not-allowed;
+    opacity: 0.55;
+}
+
+.references-dashboard {
+    display: block;
+    width: 92%;
+    height: 88%;
+    margin: 0 auto;
+    padding: 18px 28px;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+.references-list {
+    margin: 0;
+    padding-left: 32px;
+}
+
+.references-list li {
+    margin-bottom: 18px;
+    font-size: 1.05rem;
+    line-height: 1.45;
+}
+
+.references-list a {
+    color: #012073;
+    overflow-wrap: anywhere;
+}
+
+.references-list a:hover,
+.references-list a:focus-visible {
+    color: #027235;
+}
+
+.inline-citation {
+    color: #012073;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
 .progress {
     position: absolute;
     top: 0;
