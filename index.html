@@ -7,6 +7,7 @@
     <!-- <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Lao:wght@400;700&display=swap" rel="stylesheet"> -->
     <title>ກອງປະຊຸມທະຍາສາດ</title>
     <link rel="stylesheet" href="lib/style.css">
+    <link rel="stylesheet" href="lib/slides.css">
     <!-- <link rel="stylesheet" href="lib/icon.css"> -->
 
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"> -->
@@ -21,470 +22,200 @@
 <body>
     <div class="progress" id="progress-bar"></div>
     <!-- 💵 🔴 🔵🟢🌊🌫️📧📲📱🀆☎️-->
-    <div class="header-container">
-        <div class="animated-label" style="height: 65; font-size: 20px;">
-            <!-- 🟢ບົດສະເໜີຜົນງານການຄົ້ນຄວ້າວິທະຍາສາດ🟢<br> -->
-            💵ລະບົບຄຸ້ມຄອງພາສາ ໃນໜ້າ UI ແບບ Runtime💵<br>
-            <p style="font-size: 16px;">Dynamic Runtime UI Language Management System</p>
-
-        </div>
-
-    </div>
-
-    <div class="slide-container">
-        <div class="slide active" style="display: flex;">
-            <div class="dashboard" style="width: 70%; font-size: 20px; height: 95%;">
-
-                <ul class="profile-info-list" style="width: 100%; height: 95%; margin: 0px; ">
-                    <li>
-                        <span class="label2" style="font-size: 28px; width: 200px;">👤 ສະເໜີໂດຍ:</span>
-                        <span class="value2" style="font-size: 24px;">ວຽງທອງ ຈົ່ງຫວາຊົ່ງ</span>
-                    </li>
-                    <li>
-                        <span class="label2" style="font-size: 28px; width: 200px;">📍 ສັງກັດ:</span>
-                        <!-- 📌 -->
-                        <span class="value2" style="font-size: 24px;">🏢 ກົມແຜນການ ແລະ ການເງິນ, ກະຊວງສາທາລະນະສຸກ</br>
-                            🎓 ປ.ໂທ, ສາຂາວິທະຍາສາດຄອມພິວເຕີ, ຄວທ, ມ.ຊ</span>
-                    </li>
-                    <li>
-                        <span class="label2" style="font-size: 28px; width: 200px;">📩 email:</span>
-                        <span class="value2" style="font-size: 24px;">v.chongwaxiong@gmail.com</span>
-                    </li>
-                    <!--                    
-                    <li>
-                        <span class="label2" style="font-size: 28px; width: 250px;">🆔 ລະຫັດນັກສຶກສາ:</span>
-                        <span class="value2" style="font-size: 24px;">207N0014/26</span>
-                    </li> -->
-                    <li>
-                        <span class="label2" style="font-size: 28px; width: 200px;">📞ໂທລະສັບ:</span>
-                        <span class="value2" style="font-size: 24px;">(+856) 20 9113 2319</span>
-                    </li>
-                    <li>
-                        <span class="label2" style="font-size: 28px; width: 200px;">🌐 ບົດສະເໜີ:</span>
-                        <span class="value2" style="font-size: 24px;">viengthong2015.github.io/myui</span>
-                    </li>
-
-                    
-                </ul>
-
-
+    <header class="header-container">
+        <div class="animated-label">
+            <div class="header-tech-mark" aria-hidden="true">
+                <span>&lt;/&gt;</span>
             </div>
 
-            <div style="
-                    /* margin: 20px; */
-                    height: 95%;
-                    width: 40%;
-                    display: grid;
-                    grid-template-columns: 1fr 1fr;
-                    grid-template-rows: 1fr 1fr;
-                    gap: 10px;
-                " class="dashboard">
-
-                <!-- <img src="images/front.png" style="width: 850px; height: 540px;"> -->
-                <div class="panel-card1 card-blue" style="height: 100%; width: 100%;">
-                    <div class="card-day">Design Database to suport expansion</div>
-                    <div class="card-number1">1 🛢️</div>
-                    <div style="text-align: left;">
-                        ອອກແບບຖານຂໍ້ມູນທີ່ຢືດຢຸນໄດ້ ເພື່ອຮອງຮັບການຂະຫຍາຍລະບົບພາສາ
-                    </div>
+            <div class="header-copy">
+                <div class="header-eyebrow">
+                    <span class="header-live-dot"></span>
+                    Intelligent · Adaptive · Real-time
                 </div>
-                <div class="panel-card1 card-teal" style="height: 100%; width: 100%;">
-                    <div class="card-day">Develop Runtime Translation Engine</div>
-                    <div class="card-number1">2 ⚙️🔡</div>
-                    <div style="text-align: left;">
-                        ພັດທະນາເຄື່ອງຈັກຈັດການພາສາ ແບບ Runtime
-                    </div>
-                </div>
-
-                <div class="panel-card1 card-blue1" style="height: 100%; width: 100%;">
-                    <div class="card-day">Admin UI to manage Languages</div>
-                    <div class="card-number1">3 💻</div>
-                    <div style="text-align: left;">
-                        ພັດທະນາ UI ສຳລັບຈັດການພາສາ ດ້ວຍຜູ້ບໍລິຫານລະບົບ (Admin)
-                    </div>
-                </div>
-                <div class="panel-card1 card-pink" style="height: 100%; width: 100%;">
-                    <div class="card-day">Performance Evaluation</div>
-                    <div class="card-number1">4 📈💲</div>
-                    <div style="text-align: left;">
-                        ປຽບທຽບປະສິດທິພາບກັບລະບົບແບບດັ້ງເດີມ
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-
-        <div class="slide">
-            <h2 style="top:0%; margin:0%; text-align: center; font-size: 28px;">ເນື້ອໃນ</h2>
-            <div style="display: flex; width: 100%; height: 95%; gap: 10px;">
-                <div class="dashboard" style="width: 60%; height: 95%; flex:1">
-
-                    <div class="content-text" style="font-size: 26px;flex: 1;">
-                        <div class="label-row">
-                            <span class="label">1</span>
-                            <span class="label-text">ບັນຫາທີ່ພົບ ຫຼື ສີ່ງທ້າທາຍ (The Challenges)</span>
-                        </div>
-                        <div class="label-row">
-                            <span class="label">2</span>
-                            <span class="label-text">ຈຸດປະສົງຂອງໂຄງການ (Objectives)</span>
-                        </div>
-                        <div class="label-row">
-                            <span class="label">3</span>
-                            <span class="label-text">ໂຄງສ້າງລະບົບ (System Architecture)</span>
-                        </div>
-                        <div class="label-row">
-                            <span class="label">4</span>
-                            <span class="label-text">ການອອກແບບຖານຂໍ້ມູນ (Database) ແລະ ເຕັກໂນໂລຊີ (Technologies)</span>
-                        </div>
-                        <div class="label-row">
-                            <span class="label">5</span>
-                            <span class="label-text">ຜົນປະໂຫຍດ ແລະ ການປະເມີນ</span>
-                        </div>
-                        <div class="label-row">
-                            <span class="label">6</span>
-                            <span class="label-text">ສາທິດລະບົບ (Demonstration)</span>
-                        </div>
-
-                    </div>
-
-
-                </div>
-
-                <div style="height: 95%;width: 40%;overflow: hidden;" class="dashboard">
-
-                    <img src="images/overview.png" style="width: 100%;height: 100%;object-fit: fill;display: block; border-radius: 10px;">
-
-                </div>
-            </div>
-        </div>
-
-
-        <div class="slide">
-            <h2 style="top:0%; margin:0%; text-align: center; font-size: 28px;">1. ບັນຫາທີ່ພົບ ຫຼື ສີ່ທ້າທາຍ (The
-                Challenges)</h2>
-            <div style="display: flex; width: 100%; height: 95%; gap: 10px;">
-                <div class="dashboard" style="width: 60%; height: 95%; flex:1">
-
-                    <div class="content-text" style="font-size: 26px;flex: 1;">
-                        <div class="label-row">
-                            <span class="label">1</span>
-                            <span class="label-text"><b>Hard-coded strings:</b> ຄຳສັບ (label) ຖືກກຳນົດຕາຍຕົວໃນ
-                                Code.</span>
-                        </div>
-                        <div class="label-row">
-                            <span class="label">2</span>
-                            <span class="label-text"><b>ຄວາມຊ້ຳຊ້ອນ:</b> ຄຳສັບດຽວກັນຖືກກຳນົດໄວ້ຫຼາຍບ່ອນໃນ
-                                Backend.</span>
-                        </div>
-                        <div class="label-row">
-                            <span class="label">3</span>
-                            <span class="label-text"><b>ຄວາມບໍ່ສອດຄ່ອງ:</b> ຂາດມາດຕະຖານການແປ (Technical Terms)
-                                ພາຍໃນທີມ. <span class="inline-citation">[2], [3]</span></span>
-                        </div>
-                        <div class="label-row">
-                            <span class="label">4</span>
-                            <span class="label-text"><b>ການປັບປ່ຽນ:</b> ຕ້ອງແມ່ນນັກພັດທະນາທຸກຄັ້ງ ເມື່ອມີການປັບປ່ຽນ ຫຼື
-                                ປ່ຽນແປງພາສາໃນ UI.</span>
-                        </div>
-                        <div class="label-row">
-                            <span class="label">5</span>
-                            <span class="label-text"><b>ການ Build ລະບົບຄືນ:</b> ທຸກຄັ້ງທີ່ແປໃໝ່ ຫຼືປ່ຽນແປງ ຄຳສັບ ຕ້ອງ
-                                Deploy ລະບົບໃໝ່. <span class="inline-citation">[1]</span></span>
-                        </div>
-
-                    </div>
-
-
-                </div>
-
-                <div style="height: 95%;width: 40%;overflow: hidden;" class="dashboard">
-
-                    <img src="images/hard_code.png" style="width: 100%;height: 100%;object-fit: fill;display: block; border-radius: 10px;">
-
-                </div>
-            </div>
-        </div>
-
-
-
-        <div class="slide">
-            <h2 style="top:0%; margin:0%; text-align: center; font-size: 28px;">2. ຈຸດປະສົງຂອງໂຄງການ (Objectives)</h2>
-            <div style="display: flex; width: 100%; height: 95%; gap: 10px;">
-                <div class="dashboard" style="width: 60%; height: 95%; flex:1">
-
-                    <div class="content-text" style="font-size: 26px;flex: 1;">
-                        <div class="label-row">
-                            <span class="label">1</span>
-                            <span class="label-text">ອອກແບບ Model ທີ່ຮອງຮັບຄຳສັບຂອງ UI ພ້ອມທາງການແປເປັນຫຼາຍໆພາສາ</span>
-                        </div>
-                        <div class="label-row">
-                            <span class="label">2</span>
-                            <span class="label-text">ພັດທະນາ Translation Engine ທີ່ເຮັດວຽກແບບ Runtime
-                                <span class="inline-citation">[1]</span></span>
-                        </div>
-                        <div class="label-row">
-                            <span class="label">3</span>
-                            <span class="label-text">ສ້າງ Admin Interface ໃຫ້ຜູ້ໃຊ້ທົ່ວໄປສາມາດເພີ່ມພາສາທີ່ຕົນເອງຕ້ອງການ
-                                ແລະ ສາມາດແປ ແລະ ແກ້ໄຂ ໂດຍບໍ່ຕ້ອງ redeploy ຫຼື rebuild
-                                <span class="inline-citation">[1]</span></span>
-                        </div>
-                        <div class="label-row">
-                            <span class="label">4</span>
-                            <span class="label-text">ປະເມີນປະສິດທິພາບປຽບທຽບກັບວິທີການແບບດັ້ງເດີມ</span>
-                        </div>
-
-                    </div>
-
-
-                </div>
-
-                <div style="height: 95%;width: 40%;overflow: hidden;" class="dashboard">
-
-                    <img src="images/objective.png" style="width: 100%;height: 100%;object-fit: fill;display: block; border-radius: 10px;">
-
-                </div>
-            </div>
-        </div>
-
-        <div class="slide">
-            <h2 style="top:0%; margin:0%; text-align: center; font-size: 28px;">3. ໂຄງສ້າງລະບົບ (System Architecture)
-            </h2>
-            <div style="display: flex; width: 100%; height: 95%; gap: 10px;">
-                <div class="dashboard" style="width: 60%; height: 95%; flex:1">
-
-                    <div class="content-text" style="font-size: 26px;flex: 1;">
-                        <div class="label-row">
-                            <span class="label">1</span>
-                            <span class="label-text"><b>ຖານຂໍ້ມູນ:</b> ເກັບຄຳສັບ (Key) ແລະ ຄຳແປ (Value).</span>
-                        </div>
-                        <div class="label-row">
-                            <span class="label">2</span>
-                            <span class="label-text"><b>ການເຊື່ອມຕໍ່:</b> ຮັບຄຳແປຜ່ານ API ຫຼື/ແລະ Server-Client (java
-                                RMI).</span>
-                        </div>
-                        <div class="label-row">
-                            <span class="label">3</span>
-                            <span class="label-text"><b>ເຄື່ອງມືການແປ:</b> ສະແດງ ຄຳສັບໃສ່ UI ແບບ Dynamic
-                                (Runtime).</span>
-                        </div>
-                        <div class="label-row">
-                            <span class="label">4</span>
-                            <span class="label-text"><b>Admin Interface:</b> ໃຫ້ຜູ້ບໍລິຫານລະບົບສາມາດເພີ່ມ, ແກ້ໄຂ ແລະ
-                                ຈັດການຄຳແປພາສາໄດ້ດ້ວຍຕົນເອງ <span class="inline-citation">[1]</span></span>
-                        </div>
-
-                    </div>
-
-
-                </div>
-
-                <div style="height: 95%;width: 40%;overflow: hidden;" class="dashboard">
-
-                    <img src="images/architecture.png"
-                        style="width: 100%;height: 100%;object-fit: fill;display: block; border-radius: 10px;">
-
-                </div>
-            </div>
-        </div>
-
-
-        <div class="slide">
-            <h2 style="top:0%; margin:0%; text-align: center; font-size: 28px;">4. ການອອກແບບຖານຂໍ້ມູນ (Database) ແລະ
-                ເຕັກໂນໂລຊີ (Technologies)</h2>
-            <div style="display: flex; width: 100%; height: 95%; gap: 10px;">
-                <div class="dashboard" style="width: 60%; height: 95%; flex:1">
-
-                    <div class="content-text" style="font-size: 26px;flex: 1;">
-                        <div class="label-row">
-                            <span class="label">1</span>
-                            <span class="label-text">ທຸກຄຳສັບ (label) ຕ້ອງຈັດເກັບແບບ Single Source of Truth ແລະ ຕ້ອງ
-                                unique</span>
-                        </div>
-                        <div class="label-row">
-                            <span class="label">2</span>
-                            <span class="label-text">ຮອງຮັບການ Reuse ຄຳສັບດຽວກັນໃນທຸກ Module</span>
-                        </div>
-                        <div class="label-row">
-                            <span class="label">3</span>
-                            <span class="label-text">ເກັບຂໍ້ມູນ: Language (ID, Code, Font), UI_Keys, Translations
-                                (Value), ...</span>
-                        </div>
-                        <div class="label-row">
-                            <span class="label">4</span>
-                            <span class="label-text">Technologies: [Java-RMI, Java-Swing], [Python/Node.js ແລະ
-                                Django/react framework], ... <span class="inline-citation">[1]</span></span>
-                        </div>
-                        <div class="label-row">
-                            <span class="label">5</span>
-                            <span class="label-text">ຮູບແບບ Application: Windows Application, Web Application & mobile
-                                application, ...</span>
-                        </div>
-
-                    </div>
-
-
-                </div>
-
-                <div style="height: 95%;width: 30%;overflow: hidden;" class="dashboard">
-
-                    <img src="images/Single_source3G.png"
-                        style="width: 100%;height: 100%;object-fit: fill;display: block; border-radius: 10px;">
-
-                </div>
-            </div>
-        </div>
-
-
-        <div class="slide">
-            <h2 style="top:0%; margin:0%; text-align: center; font-size: 28px;">5. ຜົນປະໂຫຍດ ແລະ ການປະເມີນ</h2>
-            <div style="display: flex; width: 100%; height: 95%; gap: 10px;">
-                <div class="dashboard" style="width: 60%; height: 95%; flex:1">
-
-                    <div class="content-text" style="font-size: 26px;flex: 1;">
-                        <div class="label-row">
-                            <span class="label">1</span>
-                            <span class="label-text">ຄວາມຢືດຢຸ່ນສູງ (High Agility) ໃນການປັບປ່ຽນ ພາສາໃນ UI</span>
-                        </div>
-                        <div class="label-row">
-                            <span class="label">2</span>
-                            <span class="label-text">ປະຢັດເວລາໃນການແປ, ການພັດພັດທະນາ ແລະ ຫຼຸດຜ່ອນຄ່າໃຊ້ຈ່າຍ
-                                <span class="inline-citation">[1]</span></span>
-                        </div>
-                        <div class="label-row">
-                            <span class="label">3</span>
-                            <span class="label-text">ສະດວກຕໍ່ຜູ້ໃຊ້ <span class="inline-citation">[5]</span></span>
-                        </div>
-                        <div class="label-row">
-                            <span class="label">4</span>
-                            <span class="label-text">ຜູ້ໃຊ້ສາມາດຈັດການ ການແປດ້ວຍຕົນເອງ ໂດຍບໍ່ຕ້ອງການການ build app
-                                ຄືນໃໝ່</span>
-                        </div>
-
-
-                    </div>
-
-
-                </div>
-
-                <div style="height: 95%;width: 40%;overflow: hidden;" class="dashboard">
-
-                    <img src="images/lessFund1.jpg" style="width: 100%;height: 100%;object-fit: fill;display: block; border-radius: 10px;">
-
-                </div>
-            </div>
-        </div>
-
-        <div class="slide">
-            <h2 style="top:0%; margin:0%; text-align: center; font-size: 28px;">6. ສາທິດລະບົບ (Demontration) - ຮູບແບບ Windown base</h2>
-            <!-- <div><img src="images/demo1.png"></div>
-            <div><img src="images/demo2.png"></div> -->
-
-            <div style="
-                    /* margin: 20px; */
-                    height: 95%;
-                    width: 95%;
-                    display: grid;
-                    grid-template-columns: 1fr 1fr;
-                    grid-template-rows: 1fr 1fr;
-                    gap: 20px;
-                ">
-
-                <!-- <img src="images/front.png" style="width: 850px; height: 540px;"> -->
-                <div class="panel-card1 card-blue" style="height: 100%; width: 100%;">
-                    <div class="card-day">Manage Languages UI</div>
-                    <img src="images/demo1.png" style="width: 80%;height: 80%;object-fit: fill;display: block; border-radius: 10px;">
-                    <div style="text-align: left;">
-                        UI ຈັດການພາສາແບບ Runtime ດ້ວຍ Translation Engine
-                    </div>
-                </div>
-                <div class="panel-card1 card-teal" style="height: 100%; width: 100%;">
-                    <div class="card-day">Runtime Translation Engine UI</div>
-                    <img src="images/demo2.png" style="width: 80%;height: 80%;object-fit: fill;display: block; border-radius: 10px;">
-                    <div style="text-align: left;">
-                        UI ສຳລັບຈັດການພາສາ ດ້ວຍຜູ້ບໍລິຫານລະບົບ (Admin)
-                    </div>
-                </div>
-
-                <div class="panel-card1 card-blue1" style="height: 100%; width: 100%;">
-                    <div class="card-day">Add Language UI</div>
-                     <img src="images/addL.png" style="width: 80%;height: 80%;object-fit: fill;display: block; border-radius: 10px;">
-                    <div style="text-align: left;">
-                    UI ທີ່ໃຊ້ເພີ່ມພາສາ
-                    </div>
-                </div>
-                <div class="panel-card1 card-pink" style="height: 100%; width: 100%;">
-                    <div class="card-day">Translation UI</div>
-                    <img src="images/transUI.png" style="width: 80%;height: 80%;object-fit: fill;display: block; border-radius: 10px;">
-                    <div style="text-align: left;">
-                        UI ທີ່ໃຊ້ແປພາສາ
-                    </div>
-                </div>
-
+                <p class="header-title-lao">ລະບົບຄຸ້ມຄອງພາສາ ໃນໜ້າ UI ແບບ Runtime</p>
+                <h1 class="header-title">Dynamic Runtime UI Language Management System</h1>
             </div>
 
+            <div class="header-status" aria-hidden="true">
+                <span>UI</span>
+                <small>LIVE</small>
+            </div>
         </div>
+    </header>
 
-        <div class="slide">
-            <h2 style="top:0%; margin:0%; text-align: center; font-size: 28px;">ເອກະສານອ້າງອີງ (References)</h2>
-            <div class="dashboard references-dashboard">
+    <main class="slide-container">
+        <section class="slide slide-intro active">
+            <div class="intro-layout">
+                <article class="presenter-card">
+                    <div class="card-kicker"><span></span> Research Presentation</div>
+                    <h2>ລະບົບພາສາທີ່ປັບປ່ຽນໄດ້<br><strong>ໂດຍບໍ່ຕ້ອງ Build ໃໝ່</strong></h2>
+                    <p class="intro-summary">A scalable approach to managing and translating user-interface content while an application is running.</p>
+                    <dl class="presenter-details">
+                        <div><dt>Presenter</dt><dd>ວຽງທອງ ຈົ່ງຫວາຊົ່ງ</dd></div>
+                        <div><dt>Organisation</dt><dd>ກົມແຜນການ ແລະ ການເງິນ, ກະຊວງສາທາລະນະສຸກ<br>ປ.ໂທ, ສາຂາວິທະຍາສາດຄອມພິວເຕີ, ຄວທ, ມ.ຊ</dd></div>
+                        <div><dt>Contact</dt><dd>v.chongwaxiong@gmail.com · (+856) 20 9113 2319</dd></div>
+                        <div><dt>Project</dt><dd>viengthong2015.github.io/myui</dd></div>
+                    </dl>
+                </article>
+                <div class="innovation-grid" aria-label="Project pillars">
+                    <article class="innovation-card">
+                        <span class="card-code">01</span>
+                        <span class="line-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="7" ry="3"/><path d="M5 5v6c0 1.7 3.1 3 7 3s7-1.3 7-3V5M5 11v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6"/></svg></span>
+                        <h3>Scalable Database</h3><p>ຖານຂໍ້ມູນທີ່ຢືດຢຸ່ນ ແລະ ຮອງຮັບຫຼາຍພາສາ</p>
+                        <div class="innovation-visual" aria-hidden="true"><svg viewBox="0 0 120 120"><ellipse cx="60" cy="28" rx="34" ry="14"/><path d="M26 28v28c0 8 15 14 34 14s34-6 34-14V28M26 56v28c0 8 15 14 34 14s34-6 34-14V56"/><path d="M79 75h23M91 64v23"/></svg></div>
+                    </article>
+                    <article class="innovation-card">
+                        <span class="card-code">02</span>
+                        <span class="line-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 7h-5V2M4 17h5v5"/><path d="M18.5 5.5A9 9 0 0 0 4 9M5.5 18.5A9 9 0 0 0 20 15"/><path d="m13 8-3 5h4l-3 5"/></svg></span>
+                        <h3>Runtime Engine</h3><p>ປ່ຽນພາສາໃນ UI ໄດ້ທັນທີ</p>
+                        <div class="innovation-visual" aria-hidden="true"><svg viewBox="0 0 120 120"><path d="M94 42h-24V18M26 78h24v24"/><path d="M87 31A43 43 0 0 0 23 51M33 89a43 43 0 0 0 64-20"/><path d="m64 38-18 29h22L52 94"/></svg></div>
+                    </article>
+                    <article class="innovation-card">
+                        <span class="card-code">03</span>
+                        <span class="line-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="8" cy="7" r="3"/><path d="M3 20v-2a5 5 0 0 1 10 0v2M16 5h5M18 3v4M16 12h5M16 17h5M19 15v4"/></svg></span>
+                        <h3>Admin Control</h3><p>ຈັດການຄຳສັບໄດ້ໂດຍຜູ້ບໍລິຫານ</p>
+                        <div class="innovation-visual" aria-hidden="true"><svg viewBox="0 0 120 120"><circle cx="38" cy="36" r="15"/><path d="M13 91v-9c0-14 11-25 25-25s25 11 25 25v9M73 28h34M88 18v20M73 60h34M73 89h34M96 79v20"/></svg></div>
+                    </article>
+                    <article class="innovation-card">
+                        <span class="card-code">04</span>
+                        <span class="line-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V5M16 20v-7M22 20H2"/><path d="m4 8 6-5 6 7 5-5"/></svg></span>
+                        <h3>Evaluation</h3><p>ປຽບທຽບປະສິດທິພາບກັບວິທີເດີມ</p>
+                        <div class="innovation-visual" aria-hidden="true"><svg viewBox="0 0 120 120"><path d="M18 98V57M45 98V30M72 98V66M99 98V45M10 98h100"/><path d="m18 45 28-25 27 32 31-31"/><path d="m91 21h13v13"/></svg></div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="slide">
+            <div class="slide-heading"><span class="section-index">00</span><div><p>Presentation roadmap</p><h2>ເນື້ອໃນ <small>Overview</small></h2></div></div>
+            <div class="agenda-layout">
+                <div class="roadmap">
+                    <article><span class="roadmap-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 8v5M12 17h.01"/><path d="M10.3 3.8 2.6 17a2 2 0 0 0 1.7 3h15.4a2 2 0 0 0 1.7-3L13.7 3.8a2 2 0 0 0-3.4 0Z"/></svg></span><div><small>01 · Problem</small><h3>ບັນຫາ ແລະ ສິ່ງທ້າທາຍ</h3></div></article>
+                    <article><span class="roadmap-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/><path d="m15 9 5-5M16 4h4v4"/></svg></span><div><small>02 · Direction</small><h3>ຈຸດປະສົງຂອງໂຄງການ</h3></div></article>
+                    <article><span class="roadmap-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="6" rx="1"/><rect x="14" y="15" width="7" height="6" rx="1"/><path d="M6.5 9v4h11v2M17.5 15V9H14"/></svg></span><div><small>03 · System</small><h3>ໂຄງສ້າງລະບົບ</h3></div></article>
+                    <article><span class="roadmap-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="7" ry="3"/><path d="M5 5v6c0 1.7 3.1 3 7 3s7-1.3 7-3V5M5 11v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6"/></svg></span><div><small>04 · Foundation</small><h3>ຖານຂໍ້ມູນ ແລະ ເຕັກໂນໂລຊີ</h3></div></article>
+                    <article><span class="roadmap-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V5M16 20v-7M22 20H2"/><path d="m4 8 6-5 6 7 5-5"/></svg></span><div><small>05 · Impact</small><h3>ຜົນປະໂຫຍດ ແລະ ການປະເມີນ</h3></div></article>
+                    <article><span class="roadmap-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="m10 8 5 3-5 3V8ZM8 21h8M12 17v4"/></svg></span><div><small>06 · Experience</small><h3>ສາທິດລະບົບ</h3></div></article>
+                </div>
+                <figure class="visual-frame overview-visual"><div class="visual-label">System journey</div><img src="images/overview.png" alt="Overview of the runtime language management system"><figcaption>From language data to a live translated interface</figcaption></figure>
+            </div>
+        </section>
+
+        <section class="slide">
+            <div class="slide-heading"><span class="section-index">01</span><div><p>Why change is necessary</p><h2>ບັນຫາທີ່ພົບ ຫຼື ສິ່ງທ້າທາຍ <small>The Challenges</small></h2></div></div>
+            <div class="challenge-layout">
+                <div class="problem-flow">
+                    <article><span aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m8 9 3 3-3 3M13 15h3"/><rect x="3" y="4" width="18" height="16" rx="2"/></svg></span><div><h3>Hard-coded strings</h3><p>ຄຳສັບ UI ຖືກກຳນົດຕາຍຕົວໃນ Code</p></div></article>
+                    <article><span aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></svg></span><div><h3>ຄວາມຊ້ຳຊ້ອນ</h3><p>ຄຳສັບດຽວກັນຖືກກຳນົດໄວ້ຫຼາຍບ່ອນ</p></div></article>
+                    <article><span aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 8v5M12 17h.01"/><path d="M10.3 3.8 2.6 17a2 2 0 0 0 1.7 3h15.4a2 2 0 0 0 1.7-3L13.7 3.8a2 2 0 0 0-3.4 0Z"/></svg></span><div><h3>ຄວາມບໍ່ສອດຄ່ອງ</h3><p>ຂາດມາດຕະຖານ Technical Terms <span class="inline-citation">[2], [3]</span></p></div></article>
+                    <article><span aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="9" cy="7" r="3"/><path d="M4 20v-2a5 5 0 0 1 10 0v2M17 8v6M14 11h6"/></svg></span><div><h3>Developer-dependent</h3><p>ທຸກການປ່ຽນພາສາຕ້ອງໃຊ້ນັກພັດທະນາ</p></div></article>
+                    <article><span aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 16V4M8 8l4-4 4 4"/><path d="M5 13v6h14v-6"/></svg></span><div><h3>Rebuild &amp; redeploy</h3><p>ຕ້ອງ Deploy ລະບົບໃໝ່ທຸກຄັ້ງ <span class="inline-citation">[1]</span></p></div></article>
+                </div>
+                <figure class="visual-frame problem-visual"><div class="visual-label">Legacy workflow</div><img src="images/hard_code.png" alt="Hard-coded language workflow"></figure>
+            </div>
+        </section>
+
+        <section class="slide">
+            <div class="slide-heading"><span class="section-index">02</span><div><p>What the project will achieve</p><h2>ຈຸດປະສົງຂອງໂຄງການ <small>Objectives</small></h2></div></div>
+            <div class="objective-layout">
+                <div class="objective-orbit">
+                    <div class="orbit-core"><span>Dynamic</span><strong>Language<br>System</strong><small>Runtime UI</small></div>
+                    <article class="objective-card"><span aria-hidden="true"><svg viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="7" ry="3"/><path d="M5 5v6c0 1.7 3.1 3 7 3s7-1.3 7-3V5M5 11v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6"/></svg></span><h3>Data Model</h3><p>ຮອງຮັບ UI keys ແລະ ຄຳແປຫຼາຍພາສາ</p></article>
+                    <article class="objective-card"><span aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 7h-5V2M4 17h5v5"/><path d="M18.5 5.5A9 9 0 0 0 4 9M5.5 18.5A9 9 0 0 0 20 15"/></svg></span><h3>Translation Engine</h3><p>ເຮັດວຽກແບບ Runtime <b>[1]</b></p></article>
+                    <article class="objective-card"><span aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="8" cy="7" r="3"/><path d="M3 20v-2a5 5 0 0 1 10 0v2M16 5h5M18 3v4M16 12h5M16 17h5M19 15v4"/></svg></span><h3>Admin Interface</h3><p>ເພີ່ມ ແລະ ແກ້ໄຂພາສາໂດຍບໍ່ Redeploy <b>[1]</b></p></article>
+                    <article class="objective-card"><span aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V5M16 20v-7M22 20H2"/><path d="m4 8 6-5 6 7 5-5"/></svg></span><h3>Evaluation</h3><p>ປຽບທຽບກັບວິທີການແບບດັ້ງເດີມ</p></article>
+                </div>
+                <figure class="visual-frame objective-visual"><div class="visual-label">Project objectives</div><img src="images/objective.png" alt="Project objectives diagram"></figure>
+            </div>
+        </section>
+
+        <section class="slide">
+            <div class="slide-heading"><span class="section-index">03</span><div><p>How the components connect</p><h2>ໂຄງສ້າງລະບົບ <small>System Architecture</small></h2></div></div>
+            <div class="architecture-layout">
+                <aside class="architecture-notes">
+                    <article><span aria-hidden="true"><svg viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="7" ry="3"/><path d="M5 5v6c0 1.7 3.1 3 7 3s7-1.3 7-3V5M5 11v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6"/></svg></span><div><h3>Database</h3><p>ເກັບ Key ແລະ Value</p></div></article>
+                    <article><span aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.5.5l2-2a5 5 0 0 0-7-7l-1 1M14 11a5 5 0 0 0-7.5-.5l-2 2a5 5 0 0 0 7 7l1-1"/></svg></span><div><h3>Connection</h3><p>API / Java RMI</p></div></article>
+                    <article><span aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/><path d="m17 7 2 2-2 2"/></svg></span><div><h3>Translation Engine</h3><p>ສະແດງຄຳສັບແບບ Runtime</p></div></article>
+                    <article><span aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="8" cy="7" r="3"/><path d="M3 20v-2a5 5 0 0 1 10 0v2M16 5h5M18 3v4M16 12h5M16 17h5M19 15v4"/></svg></span><div><h3>Admin Interface</h3><p>ຈັດການຄຳແປໄດ້ໂດຍກົງ <b>[1]</b></p></div></article>
+                </aside>
+                <figure class="architecture-canvas"><div class="visual-label">Live system flow</div><img src="images/architecture.png" alt="Runtime UI language system architecture"></figure>
+            </div>
+        </section>
+
+        <section class="slide">
+            <div class="slide-heading"><span class="section-index">04</span><div><p>A single, reusable language foundation</p><h2>ຖານຂໍ້ມູນ ແລະ ເຕັກໂນໂລຊີ <small>Database &amp; Technologies</small></h2></div></div>
+            <div class="database-layout">
+                <div class="database-content">
+                    <div class="principle-card"><span class="principle-mark">1×</span><div><small>Core principle</small><h3>Write once. Translate once. Reuse everywhere.</h3></div></div>
+                    <div class="data-points">
+                        <article><span aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="8" cy="15" r="4"/><path d="m11 12 8-8M16 4l4 4M14 6l4 4"/></svg></span><p>ທຸກຄຳສັບ (label) ຕ້ອງຈັດເກັບແບບ Single Source of Truth ແລະ ຕ້ອງ <strong>unique</strong></p></article>
+                        <article><span aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 7h-5V2M4 17h5v5"/><path d="M18.5 5.5A9 9 0 0 0 4 9M5.5 18.5A9 9 0 0 0 20 15"/></svg></span><p>ຮອງຮັບການ Reuse ຄຳສັບດຽວກັນໃນທຸກ Module <strong>module</strong></p></article>
+                        <article><span aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg></span><p>ເກັບຂໍ້ມູນ: Language (ID, Code, Font), UI_Keys, Translations (Value), ... <strong>data core</strong></p></article>
+                    </div>
+                    <div class="tech-stack">
+                        <small>Technology options <b>[1]</b></small>
+                        <div>
+                            <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 8h11v5a5 5 0 0 1-5 5h-1a5 5 0 0 1-5-5V8Z"/><path d="M17 10h1.5a2.5 2.5 0 0 1 0 5H17M8 21h10M9 5c2-1-1-2 1-3M13 5c2-1-1-2 1-3"/></svg>Java RMI</span>
+                            <span><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4M7 8h10M7 11h6"/></svg>Java Swing</span>
+                            <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3H8a4 4 0 0 0-4 4v3h8a3 3 0 0 0 3-3V4a7 7 0 0 0-3-1Z"/><path d="M12 21h4a4 4 0 0 0 4-4v-3h-8a3 3 0 0 0-3 3v3a7 7 0 0 0 3 1Z"/><circle cx="9" cy="6" r=".7"/><circle cx="15" cy="18" r=".7"/></svg>Python</span>
+                            <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 8.5 5v10L12 22l-8.5-5V7L12 2Z"/><path d="M9 16V8l6 8V8"/></svg>Node.js</span>
+                            <span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m13 3-6 10h5l-1 8 6-11h-5l1-7Z"/></svg>FastAPI/Django</span>
+                            <span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="2"/><ellipse cx="12" cy="12" rx="9" ry="3.7"/><ellipse cx="12" cy="12" rx="9" ry="3.7" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="9" ry="3.7" transform="rotate(120 12 12)"/></svg>React</span>
+                            <span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 4 6 4 9s-1 6-4 9M12 3c-3 3-4 6-4 9s1 6 4 9"/></svg>Web</span>
+                            <span><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="2"/><path d="M10 5h4M11 19h2"/></svg>Mobile</span>
+                        </div>
+                    </div>
+                </div>
+                <figure class="visual-frame database-visual"><div class="visual-label">Single source of truth</div><img src="images/Single_source3G.png" alt="Single source of truth database design"></figure>
+            </div>
+        </section>
+
+        <section class="slide">
+            <div class="slide-heading"><span class="section-index">05</span><div><p>Value created by runtime management</p><h2>ຜົນປະໂຫຍດ ແລະ ການປະເມີນ <small>Benefits &amp; Evaluation</small></h2></div></div>
+            <div class="benefits-layout">
+                <div class="benefit-grid">
+                    <article><span class="benefit-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m13 2-8 12h7l-1 8 8-12h-7l1-8Z"/></svg></span><span class="benefit-value">LIVE</span><small>High agility</small><h3>ປ່ຽນພາສາໃນ UI ໄດ້ທັນທີ</h3></article>
+                    <article><span class="benefit-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2M16 3l2-2M8 3h6"/></svg></span><span class="benefit-value">−TIME</span><small>Faster workflow</small><h3>ຫຼຸດເວລາການແປ ແລະ ພັດທະນາ <b>[1]</b></h3></article>
+                    <article><span class="benefit-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="4"/><path d="M3 21v-2a6 6 0 0 1 12 0v2M17 8h4M19 6v4"/></svg></span><span class="benefit-value">UX+</span><small>User experience</small><h3>ສະດວກ ແລະ ເຂົ້າເຖິງງ່າຍຂຶ້ນ <b>[5]</b></h3></article>
+                    <article><span class="benefit-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 7h-5V2M4 17h5v5"/><path d="M18.5 5.5A9 9 0 0 0 4 9M5.5 18.5A9 9 0 0 0 20 15M9 9l6 6M15 9l-6 6"/></svg></span><span class="benefit-value">0×</span><small>No rebuild</small><h3>ຜູ້ໃຊ້ຈັດການຄຳແປໄດ້ເອງ</h3></article>
+                </div>
+                <figure class="visual-frame benefit-visual"><div class="visual-label">Expected impact</div><img src="images/lessFund1.jpg" alt="Reduced cost and increased efficiency"><figcaption>Lower maintenance effort and faster language delivery</figcaption></figure>
+            </div>
+        </section>
+
+        <section class="slide">
+            <div class="slide-heading"><span class="section-index">06</span><div><p>From administration to live translation</p><h2>ສາທິດລະບົບ <small>Demonstration · Web-based and/or Windows-based</small></h2></div></div>
+            <div class="demo-grid">
+                <figure class="app-window"><div class="window-bar"><i></i><i></i><i></i><span>01 · Manage Languages</span></div><img src="images/demo1.png" alt="Manage Languages interface"><figcaption>ຈັດການພາສາໃນລະບົບ</figcaption></figure>
+                <figure class="app-window"><div class="window-bar"><i></i><i></i><i></i><span>02 · Runtime Engine</span></div><img src="images/demo2.png" alt="Runtime translation engine interface"><figcaption>ປ່ຽນພາສາຜ່ານ Translation Engine</figcaption></figure>
+                <figure class="app-window"><div class="window-bar"><i></i><i></i><i></i><span>03 · Add Language</span></div><img src="images/addL.png" alt="Add Language interface"><figcaption>ເພີ່ມພາສາໃໝ່</figcaption></figure>
+                <figure class="app-window"><div class="window-bar"><i></i><i></i><i></i><span>04 · Translate UI</span></div><img src="images/transUI.png" alt="Translation management interface"><figcaption>ແປ ແລະ ແກ້ໄຂ UI labels</figcaption></figure>
+            </div>
+        </section>
+
+        <section class="slide">
+            <div class="slide-heading"><span class="section-index">07</span><div><p>Research foundation</p><h2>ເອກະສານອ້າງອີງ <small>References</small></h2></div></div>
+            <div class="reference-panel">
                 <ol class="references-list">
-                    <li>Wang, P., Yoon, H. J. S., &amp; Chung, S. (2022). <i>A comparison of internationalization
-                        and localization solutions for web and mobile applications</i>. Journal of Information
-                        Systems Applied Research, 15(2), 39–46. <a
-                            href="https://www.jisara.org/2022-15/n2/JISARv15n2p39.html" target="_blank"
-                            rel="noopener noreferrer">JISAR article</a>
-                    </li>
-                    <li>Kabát, M. (2023). <i>Possible translation problems, their causes, and solutions in agile
-                        localization of software</i>. International Journal of Interactive Mobile Technologies,
-                        17(1), 129–140. <a href="https://doi.org/10.3991/ijim.v17i01.36367" target="_blank"
-                            rel="noopener noreferrer">https://doi.org/10.3991/ijim.v17i01.36367</a>
-                    </li>
-                    <li>Koneru, S., Huck, M., Exel, M., &amp; Niehues, J. (2023). <i>Analyzing challenges in neural
-                        machine translation for software localization</i>. EACL 2023, 2442–2454.
-                        <a href="https://doi.org/10.18653/v1/2023.eacl-main.179" target="_blank"
-                            rel="noopener noreferrer">https://doi.org/10.18653/v1/2023.eacl-main.179</a>
-                    </li>
-                    <li>Pirrone, M., &amp; D'Ulizia, A. (2024). <i>The localization of software and video games:
-                        Current state and future perspectives</i>. Information, 15(10), Article 648.
-                        <a href="https://doi.org/10.3390/info15100648" target="_blank"
-                            rel="noopener noreferrer">https://doi.org/10.3390/info15100648</a>
-                    </li>
-                    <li>Guerberof Arenas, A., Moorkens, J., &amp; O'Brien, S. (2021). <i>The impact of translation
-                        modality on user experience: An eye-tracking study of the Microsoft Word user
-                        interface</i>. Machine Translation, 35, 205–237.
-                        <a href="https://doi.org/10.1007/s10590-021-09267-z" target="_blank"
-                            rel="noopener noreferrer">https://doi.org/10.1007/s10590-021-09267-z</a>
-                    </li>
+                    <li>Wang, P., Yoon, H. J. S., &amp; Chung, S. (2022). <i>A comparison of internationalization and localization solutions for web and mobile applications</i>. Journal of Information Systems Applied Research, 15(2), 39–46. <a href="https://www.jisara.org/2022-15/n2/JISARv15n2p39.html" target="_blank" rel="noopener noreferrer">View article</a></li>
+                    <li>Kabát, M. (2023). <i>Possible translation problems, their causes, and solutions in agile localization of software</i>. International Journal of Interactive Mobile Technologies, 17(1), 129–140. <a href="https://doi.org/10.3991/ijim.v17i01.36367" target="_blank" rel="noopener noreferrer">DOI</a></li>
+                    <li>Koneru, S., Huck, M., Exel, M., &amp; Niehues, J. (2023). <i>Analyzing challenges in neural machine translation for software localization</i>. EACL 2023, 2442–2454. <a href="https://doi.org/10.18653/v1/2023.eacl-main.179" target="_blank" rel="noopener noreferrer">DOI</a></li>
+                    <li>Pirrone, M., &amp; D'Ulizia, A. (2024). <i>The localization of software and video games: Current state and future perspectives</i>. Information, 15(10), Article 648. <a href="https://doi.org/10.3390/info15100648" target="_blank" rel="noopener noreferrer">DOI</a></li>
+                    <li>Guerberof Arenas, A., Moorkens, J., &amp; O'Brien, S. (2021). <i>The impact of translation modality on user experience: An eye-tracking study of the Microsoft Word user interface</i>. Machine Translation, 35, 205–237. <a href="https://doi.org/10.1007/s10590-021-09267-z" target="_blank" rel="noopener noreferrer">DOI</a></li>
                 </ol>
             </div>
-        </div>
+        </section>
 
-        <div class="slide">
-            <h2 style="top:80%; margin:0%; text-align: center; font-size: 88px;">ຄຳຖາມ&ຕອບ</h2>
-        </div>
-
-        <!-- <div class="slide">
-            <h2 style="top:0%; margin:0%; text-align: center; font-size: 28px;">ຄຳຖາມ & ຕອບ</h2>
-            <div style="display: flex; width: 100%; height: 95%; gap: 10px;">
-                <div class="dashboard" style="width: 50%; height: 95%; flex:1">
-
-                   <h2>ບົດສະເໜີ</h2>
-
-
-                </div>
-
-                <div style="height: 95%;width: 50%;overflow: hidden;" class="dashboard">
-
-                    <img src="images/qr.png" style="width: 100%;height: 100%;object-fit: fill;display: block; border-radius: 10px;">
-
-                </div>
-            </div>
-        </div> -->
-       
-
-    </div>
-
+        <section class="slide closing-slide">
+            <div class="closing-grid" aria-hidden="true"></div>
+            <div class="closing-orbit"><span>?</span></div>
+            <p class="closing-kicker">Let’s discuss the future of adaptable interfaces</p>
+            <h2>ຄຳຖາມ <em>&amp;</em> ຄຳຕອບ</h2>
+            <p class="closing-subtitle">Questions &amp; Answers</p>
+            <div class="closing-contact"><span>Dynamic Runtime UI Language Management System</span><span>viengthong2015.github.io/myui</span></div>
+        </section>
+    </main>
 
     <div class="controls">
         <div class="timer-ring" id="clock-ring">
