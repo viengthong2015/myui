@@ -513,6 +513,38 @@ hr {
     .header-title {
         font-size: clamp(0.8rem, 3.5vw, 1rem);
     }
+
+    .controls {
+        left: 8px;
+        right: 8px;
+        width: auto;
+        display: grid;
+        grid-template-columns: 70px repeat(3, minmax(0, 1fr));
+        gap: 4px;
+    }
+
+    .controls .timer-ring {
+        width: 70px;
+        flex: 0 0 70px;
+        margin-right: 0;
+    }
+
+    .controls .timer-text {
+        font-size: 0.85rem;
+        letter-spacing: 0;
+    }
+
+    .controls button {
+        width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+        padding: 6px 3px;
+        font-size: 0.68rem;
+    }
+
+    .slide-number {
+        display: none;
+    }
 }
 
 @media (prefers-reduced-motion: reduce) {
